@@ -1,6 +1,6 @@
 {
   "name": "simple-books",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "List of simple books is fetched from Simple Books API",
   "main": "index.js",
   "scripts": {

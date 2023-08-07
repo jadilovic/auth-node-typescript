@@ -4,4 +4,12 @@ const getSimpleBooks = async () => {
 	return books;
 };
 
-module.exports = getSimpleBooks;
+const getBook = async (id) => {
+	const response = await fetch(
+		'https://simple-books-api.glitch.me/books/' + id
+	);
+	const book = await response.json();
+	return book;
+};
+
+module.exports = { getSimpleBooks, getBook };
