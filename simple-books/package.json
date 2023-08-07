@@ -1,0 +1,27 @@
+{
+  "name": "simple-books",
+  "version": "1.0.0",
+  "description": "List of simple books is fetched from Simple Books API",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jadilovic/auth-node-typescript.git"
+  },
+  "keywords": [
+    "API",
+    "books",
+    "simple"
+  ],
+  "author": "Jasmin Adilovic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jadilovic/auth-node-typescript/issues"
+  },
+  "homepage": "https://github.com/jadilovic/auth-node-typescript#readme",
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
+}
