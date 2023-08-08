@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@j.adilovic/go-rest": "^1.0.0"
+  }
+}
