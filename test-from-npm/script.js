@@ -1,7 +1,12 @@
-const { getBook, getSimpleBooks } = require('simple-books');
+const {
+	getBook,
+	getSimpleBooks,
+	getSimpleBooksAxios,
+} = require('simple-books');
 
 const getData = async () => {
-	const books = await getSimpleBooks();
+	// const books = await getSimpleBooks();
+	const books = await getSimpleBooksAxios();
 	console.log(books);
 };
 

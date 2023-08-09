@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "@j.adilovic/go-rest": "^1.0.0"
+    "@j.adilovic/go-rest": "^1.1.1"
   }
 }
