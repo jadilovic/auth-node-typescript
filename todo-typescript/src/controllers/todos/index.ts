@@ -5,6 +5,7 @@ import { ITodo } from '../../types/todo';
 const getTodos = async (req: Request, res: Response): Promise<void> => {
 	console.log('TEST GIT');
 	console.log('TEST GIT 3');
+	console.log('TEST GIT 5');
 
 	try {
 		const todos: ITodo[] = await Todo.find();
