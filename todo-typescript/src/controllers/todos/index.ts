@@ -3,6 +3,7 @@ import Todo from '../../models/todo';
 import { ITodo } from '../../types/todo';
 
 const getTodos = async (req: Request, res: Response): Promise<void> => {
+	console.log('TEST GIT');
 	try {
 		const todos: ITodo[] = await Todo.find();
 		res.status(200).json(todos);
