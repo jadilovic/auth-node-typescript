@@ -16,6 +16,8 @@ exports.deleteTodo = exports.updateTodo = exports.addTodo = exports.getTodos = v
 const todo_1 = __importDefault(require("../../models/todo"));
 const getTodos = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     console.log('TEST GIT');
+    console.log('TEST GIT 3');
+    console.log('TEST GIT 5');
     try {
         const todos = yield todo_1.default.find();
         res.status(200).json(todos);
