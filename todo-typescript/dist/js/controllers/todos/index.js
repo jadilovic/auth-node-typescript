@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.deleteTodo = exports.updateTodo = exports.addTodo = exports.getTodos = void 0;
 const todo_1 = __importDefault(require("../../models/todo"));
 const getTodos = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    console.log('TEST GIT');
     try {
         const todos = yield todo_1.default.find();
         res.status(200).json(todos);
@@ -27,7 +28,6 @@ const getTodos = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
 exports.getTodos = getTodos;
 const addTodo = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        console.log(req.body);
         const body = req.body;
         const todo = new todo_1.default({
             name: body.name,
@@ -46,7 +46,7 @@ const addTodo = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
 exports.addTodo = addTodo;
 const updateTodo = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const id = req.params;
+        const { id } = req.params;
         const body = req.body;
         const updatedTodo = yield todo_1.default.findByIdAndUpdate({ _id: id }, body);
         const todos = yield todo_1.default.find();
@@ -60,7 +60,7 @@ const updateTodo = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
 exports.updateTodo = updateTodo;
 const deleteTodo = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const id = req.params;
+        const { id } = req.params;
         const deletedTodo = yield todo_1.default.findByIdAndRemove({ _id: id });
         const todos = yield todo_1.default.find();
         res.status(202).json({ message: 'Todo was updated', deletedTodo, todos });
