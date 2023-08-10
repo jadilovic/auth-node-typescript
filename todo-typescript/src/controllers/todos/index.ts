@@ -14,8 +14,6 @@ const getTodos = async (req: Request, res: Response): Promise<void> => {
 
 const addTodo = async (req: Request, res: Response): Promise<void> => {
 	try {
-		console.log(req.body);
-
 		const body = req.body as Pick<ITodo, 'name' | 'description' | 'status'>;
 		const todo: ITodo = new Todo({
 			name: body.name,
@@ -34,7 +32,7 @@ const addTodo = async (req: Request, res: Response): Promise<void> => {
 
 const updateTodo = async (req: Request, res: Response): Promise<void> => {
 	try {
-		const id = req.params;
+		const { id } = req.params;
 		const body = req.body;
 
 		const updatedTodo: ITodo | null = await Todo.findByIdAndUpdate(
@@ -51,8 +49,7 @@ const updateTodo = async (req: Request, res: Response): Promise<void> => {
 
 const deleteTodo = async (req: Request, res: Response): Promise<void> => {
 	try {
-		const id = req.params;
-
+		const { id } = req.params;
 		const deletedTodo: ITodo | null = await Todo.findByIdAndRemove({ _id: id });
 		const todos: ITodo[] = await Todo.find();
 		res.status(202).json({ message: 'Todo was updated', deletedTodo, todos });
