@@ -1,0 +1,27 @@
+{
+	"name": "authentication-and-authorization",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"directories": {
+		"test": "test"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "concurrently \"cd todo-typescript && npm start\" \"cd todo-client && npm start\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jadilovic/auth-node-typescript.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/jadilovic/auth-node-typescript/issues"
+	},
+	"homepage": "https://github.com/jadilovic/auth-node-typescript#readme",
+	"dependencies": {
+		"concurrently": "^8.2.0"
+	}
+}

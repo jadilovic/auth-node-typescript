@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 type Props = {
 	saveTodo: (e: React.FormEvent, formData: ITodo | any) => void;
@@ -6,6 +6,7 @@ type Props = {
 
 const AddTodo: React.FC<Props> = ({ saveTodo }) => {
 	const [formData, setFormData] = useState<ITodo | {}>();
+	const nameInput = useRef(null);
 
 	const handleForm = (e: React.FormEvent<HTMLInputElement>): void => {
 		setFormData({
@@ -20,7 +21,13 @@ const AddTodo: React.FC<Props> = ({ saveTodo }) => {
 			<div>
 				<div>
 					<label htmlFor="name">Name</label>
-					<input onChange={handleForm} type="text" id="name" />
+					<input
+						ref={nameInput}
+						onChange={handleForm}
+						type="text"
+						id="name"
+						autoFocus
+					/>
 				</div>
 				<div>
 					<label htmlFor="description">Description</label>

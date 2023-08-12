@@ -27,6 +27,7 @@ function App() {
 		e: React.FormEvent,
 		formData: ITodo
 	): Promise<void> => {
+		// e.preventDefault();
 		const response = await addTodo(formData);
 		if (response.status !== 201) {
 			throw new Error('Failed to create new todo');

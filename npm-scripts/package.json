@@ -1,0 +1,23 @@
+{
+	"name": "npm-scripts",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"custom1": "node index.js",
+		"custom": "echo \"Hello World\"",
+		"custom2": "node customScript.js",
+		"all": "npm-run-all --parallel custom custom2 start",
+		"prestart": "node src/prestart.js",
+		"poststart": "node customScript.js",
+		"andList": "node src/prestart.js && node index.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"colors": "^1.4.0",
+		"npm-run-all": "^4.1.5"
+	}
+}
