@@ -1,5 +1,5 @@
 const http = require('http');
-const fs = require('node:fs');
+const fs = require('fs');
 
 const server = http.createServer((req, res) => {
 	const hero = { name: 'aki', age: 33 };
