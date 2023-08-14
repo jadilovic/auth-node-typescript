@@ -1,0 +1,19 @@
+{
+	"name": "greeting-by-ja",
+	"version": "1.0.0",
+	"description": "Greeting package",
+	"main": "index.js",
+	"scripts": {
+		"start": "nodemon index.js"
+	},
+	"keywords": [
+		"greeting",
+		"npm",
+		"node"
+	],
+	"author": "ja",
+	"license": "ISC",
+	"dependencies": {
+		"upper-case": "^2.0.2"
+	}
+}

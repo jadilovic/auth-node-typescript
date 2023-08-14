@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "node --watch built-in-fs-module.js",
+		"start": "node --watch thread-pool.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"keywords": [],
